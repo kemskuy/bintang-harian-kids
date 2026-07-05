@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -39,7 +40,13 @@ class LoginPage extends StatelessWidget {
             _loginButton("Daftar Akun Baru", null, Colors.indigo.shade50),
             const Spacer(),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                // Aksi harus ada di dalam kurung kurawal ini
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                );
+              },
               child: const Text("Masuk sebagai anak?"),
             ),
           ],
